@@ -1,10 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   font-family: "Outfit", sans-serif;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   background-color: #fff;
 }
@@ -51,7 +58,93 @@ nav ul a:hover {
   font-weight: 500;
 }
 
-/* MAIN Section */
+/* 
+#todo-form {
+  padding: 32px 32px 0;
+}
+
+#todo-form input {
+  padding: 12px;
+  margin-right: 12px;
+  width: 225px;
+
+  border-radius: 4px;
+  border: none;
+
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+  background: white;
+
+  font-size: 14px;
+  outline: none;
+}
+
+#todo-form button {
+  padding: 12px 32px;
+
+  border-radius: 4px;
+  border: none;
+
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+  background: #ffffff;
+  color: black;
+
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.lanes {
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+  gap: 16px;
+
+  padding: 24px 32px;
+
+  overflow: scroll;
+  height: 100%;
+}
+
+.heading {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.swim-lane {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  background: #f4f4f4;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+
+  padding: 12px;
+  border-radius: 4px;
+  width: 225px;
+  min-height: 120px;
+
+  flex-shrink: 0;
+}
+
+.task {
+  background: white;
+  color: black;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+
+  padding: 12px;
+  border-radius: 4px;
+
+  font-size: 16px;
+  cursor: move;
+}
+
+.is-dragging {
+  scale: 1.05;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+  background: rgb(50, 50, 50);
+  color: white;
+} */
 
 main {
   display: flex;
@@ -80,7 +173,7 @@ main #upper .insert {
   /* border-radius: 30px; */
 }
 
-main #upper .insert #input-box {
+main #upper .insert .input-box {
   border: none;
   color: #42326e;
   padding: 4px;
@@ -117,14 +210,14 @@ main #lower {
   border: 0.5px solid #b29ce435;
 }
 
-main #lower #cont1,
+main #lower .cont1,
 #cont2,
 #cont3,
 #cont4 {
   width: 22%;
   height: 50vh;
-  overflow: hidden;
-  border: 1px solid black;
+  overflow: scroll;
+  /* border: 1px solid black; */
 }
 
 main #lower .header {
@@ -155,30 +248,28 @@ main #lower .header .urg,
   color: #0000007b;
   padding-top: 2px;
   padding-bottom: 2px;
+  margin-top: 5px;
 }
 
 main #lower .header .nurg {
   background-color: #add05688;
   padding-left: 7px;
   padding-right: 7px;
-  margin-top: 5px;
 }
 
 main #lower .header .imp {
   background-color: #fae06f88;
   padding-left: 7px;
   padding-right: 7px;
-  margin-top: 5px;
 }
 
 main #lower .header .nimp {
   background-color: #4eccc863;
   padding-left: 7px;
   padding-right: 7px;
-  margin-top: 5px;
 }
 
-#lower li {
+#lower .task {
   list-style: none;
   font-size: 1rem;
   padding: 12px 8px 12px 35px;
@@ -192,7 +283,7 @@ main #lower .header .nimp {
   box-shadow: 0px 0px 5px 1px rgba(178, 156, 228, 0.113);
 }
 
-#lower li::before {
+#lower .task::before {
   content: "";
   position: absolute;
   height: 20px;
@@ -214,7 +305,7 @@ main #lower .header .nimp {
   background-image: url(assets/checked.png);
 }
 
-#lower li span {
+#lower .task span {
   position: absolute;
   right: 2px;
   top: 12px;
@@ -226,7 +317,7 @@ main #lower .header .nimp {
   text-align: center;
 }
 
-#lower li span:hover {
+#lower .task span:hover {
   background-color: #6e5b9a;
   border-radius: 50%;
   color: #fff;

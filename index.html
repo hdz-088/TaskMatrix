@@ -2,13 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TaskMatrix</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
+    <title>Task Matrix</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="drag.js" defer></script>
+    <script src="todo.js" defer></script>
   </head>
   <body>
     <nav>
@@ -19,16 +19,22 @@
       </ul>
     </nav>
     <main>
-      <div id="upper">
+      <div class="board" id="upper">
         <div class="insert">
-          <!-- <form action="" class="inputField"> -->
-            <input type="text" placeholder="Enter Task" id="input-box" />
-            <button onclick="addTask()">Add</button>
-          <!-- </form> -->
+          <form id="todo-form">
+            <input
+              type="text"
+              placeholder="New TODO..."
+              id="todo-input"
+              class="input-box"
+            />
+            <button type="submit">Add +</button>
+          </form>
         </div>
       </div>
-      <div id="lower">
-        <div id="cont1">
+
+      <div class="lanes" id="lower">
+        <div class="swim-lane cont1" id="todo-lane">
           <div class="header">
             <h1>Do</h1>
             <span
@@ -36,49 +42,51 @@
               <p class="imp">Important</p></span
             >
           </div>
-          <ul id="list-cont">
-
-          </ul>
+          <!-- <p class="task" draggable="true">Get groceries</p>
+          <p class="task" draggable="true">Feed the dogs</p>
+          <p class="task" draggable="true">Mow the lawn</p> -->
         </div>
-        <div id="cont2">
+
+        <div class="swim-lane" id="cont2">
           <div class="header">
             <h1>Schedule</h1>
             <span
               ><p class="nurg">Not Urgent</p>
               <p class="imp">Important</p></span
             >
+</div>
+            <!-- <p class="task" draggable="true">
+              Binge 80 hours of Game of Thrones
+            </p> -->
           </div>
-          <ul id="list-cont2">
-            <!-- <li draggable="true">Task 1</li>
-            <li draggable="true">Task 2</li> -->
-          </ul>
-        </div>
-        <div id="cont3">
-          <div class="header">
-            <h1>Delegate</h1>
-            <span
-              ><p class="urg">Urgent</p>
-              <p class="nimp">Not Important</p></span
-            >
-          </div>
-          <ul id="list-cont3" draggable="true">
 
-          </ul>
-        </div>
-        <div id="cont4">
-          <div class="header">
-            <h1>Delete</h1>
-            <span
-              ><p class="nurg">Not Urgent</p>
-              <p class="nimp">Not Important</p></span
-            >
-          </div>
-          <ul id="list-cont4" draggable="true">
+          <div class="swim-lane" id="cont3">
+            <div class="header">
+              <h1>Delegate</h1>
+              <span
+                ><p class="urg">Urgent</p>
+                <p class="nimp">Not Important</p></span
+              >
+            </div>
 
-          </ul>
+            <!-- <p class="task" draggable="true">
+              Watch video of a man
+            </p> -->
+          </div>
+          <div class="swim-lane" id="cont4">
+            <div class="header">
+              <h1>Delete</h1>
+              <span
+                ><p class="nurg">Not Urgent</p>
+                <p class="nimp">Not Important</p></span
+              >
+            </div>
+            <!-- <p class="task" draggable="true">
+              Watch video of a dog
+            </p> -->
+          </div>
         </div>
       </div>
     </main>
-    <script src="script.js"></script>
   </body>
 </html>
