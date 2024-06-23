@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskMatrix</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <nav>
+      <h1 class="logo"><a href="index.html">TaskMatrix</a></h1>
+      <ul>
+        <li><a href="#" class="manual">User Manual</a></li>
+        <li><a href="#" class="about">About</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div id="upper">
+        <div class="insert">
+          <!-- <form action="" class="inputField"> -->
+            <input type="text" placeholder="Enter Task" id="input-box" />
+            <button onclick="addTask()">Add</button>
+          <!-- </form> -->
+        </div>
+      </div>
+      <div id="lower">
+        <div id="cont1">
+          <div class="header">
+            <h1>Do</h1>
+            <span
+              ><p class="urg">Urgent</p>
+              <p class="imp">Important</p></span
+            >
+          </div>
+          <ul id="list-cont">
+
+          </ul>
+        </div>
+        <div id="cont2">
+          <div class="header">
+            <h1>Schedule</h1>
+            <span
+              ><p class="nurg">Not Urgent</p>
+              <p class="imp">Important</p></span
+            >
+          </div>
+          <ul id="list-cont2">
+            <!-- <li draggable="true">Task 1</li>
+            <li draggable="true">Task 2</li> -->
+          </ul>
+        </div>
+        <div id="cont3">
+          <div class="header">
+            <h1>Delegate</h1>
+            <span
+              ><p class="urg">Urgent</p>
+              <p class="nimp">Not Important</p></span
+            >
+          </div>
+          <ul id="list-cont3" draggable="true">
+
+          </ul>
+        </div>
+        <div id="cont4">
+          <div class="header">
+            <h1>Delete</h1>
+            <span
+              ><p class="nurg">Not Urgent</p>
+              <p class="nimp">Not Important</p></span
+            >
+          </div>
+          <ul id="list-cont4" draggable="true">
+
+          </ul>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

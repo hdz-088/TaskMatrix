@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit", sans-serif;
+}
+body {
+  background-color: #fff;
+}
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/* NAV BAR */
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: full;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  /* background-color: #e4e5f1; */
+  background-color: #b29ce4;
+}
+
+nav h1 {
+  font-style: italic;
+  color: #42326e;
+  cursor: pointer;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  width: 15%;
+  justify-content: flex-end;
+  gap: 15px;
+  color: #6e5b9a;
+}
+
+nav ul a:hover {
+  color: #42326e;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+/* MAIN Section */
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main #upper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid red; */
+  width: 95%;
+  height: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+main #upper .insert {
+  /* background-color: #d0c4f2; */
+  padding: 15px 40px 15px 40px;
+  width: 40%;
+  /* border-radius: 30px; */
+}
+
+main #upper .insert #input-box {
+  border: none;
+  color: #42326e;
+  padding: 4px;
+  padding: 7px 20px 7px 15px;
+  width: 80%;
+  font-size: 1rem;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  background-color: #d0c4f283;
+  outline: none;
+}
+
+button {
+  background-color: #42326e;
+  padding: 7px 12px;
+  font-size: 16px;
+  margin-left: -20px;
+  color: #fafafa;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+main #lower {
+  width: 95%;
+  height: 60vh;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding: 10px;
+  background-color: #faf7fa;
+  border-radius: 15px;
+  border: 0.5px solid #b29ce435;
+}
+
+main #lower #cont1,
+#cont2,
+#cont3,
+#cont4 {
+  width: 22%;
+  height: 50vh;
+  overflow: hidden;
+  border: 1px solid black;
+}
+
+main #lower .header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px 5px 10px;
+  background-color: #fff;
+  border-radius: 15px;
+  border: 0.5px solid #b29ce435;
+  box-shadow: 0px 0px 5px 1px rgba(178, 156, 228, 0.113);
+}
+
+main #lower .header h1 {
+  font-size: 1.6rem;
+  color: #b29ce4;
+}
+
+main #lower .header .urg,
+.imp,
+.nurg,
+.nimp {
+  font-size: 0.7rem;
+  background-color: #ee6c6850;
+  text-align: center;
+  border-radius: 20px;
+  color: #0000007b;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+main #lower .header .nurg {
+  background-color: #add05688;
+  padding-left: 7px;
+  padding-right: 7px;
+  margin-top: 5px;
+}
+
+main #lower .header .imp {
+  background-color: #fae06f88;
+  padding-left: 7px;
+  padding-right: 7px;
+  margin-top: 5px;
+}
+
+main #lower .header .nimp {
+  background-color: #4eccc863;
+  padding-left: 7px;
+  padding-right: 7px;
+  margin-top: 5px;
+}
+
+#lower li {
+  list-style: none;
+  font-size: 1rem;
+  padding: 12px 8px 12px 35px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  background-color: #fff;
+  border-radius: 15px;
+  margin-top: 7px;
+  border: 0.5px solid #b29ce435;
+  box-shadow: 0px 0px 5px 1px rgba(178, 156, 228, 0.113);
+}
+
+#lower li::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-image: url(assets/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+}
+
+#lower .checked {
+  color: #b29ce4;
+  text-decoration: line-through;
+}
+
+#lower .checked::before {
+  background-image: url(assets/checked.png);
+}
+
+#lower li span {
+  position: absolute;
+  right: 2px;
+  top: 12px;
+  width: 20px;
+  height: 20px;
+  font-size: 1.4rem;
+  color: #d4c6f6;
+  line-height: 20px;
+  text-align: center;
+}
+
+#lower li span:hover {
+  background-color: #6e5b9a;
+  border-radius: 50%;
+  color: #fff;
+}
